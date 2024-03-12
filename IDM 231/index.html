@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css/style.css">
+    <title>Zodiac Detector</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="flex-grid">
+      <button class="button" data-sign="aries">Aries</button>
+      <button class="button" data-sign="taurus">Taurus</button>
+      <button class="button" data-sign="gemini">Gemini</button>
+      <button class="button" data-sign="cancer">Cancer</button>
+      <button class="button" data-sign="leo">Leo</button>
+      <button class="button" data-sign="virgo">Virgo</button>
+      <button class="button" data-sign="libra">Libra</button>
+      <button class="button" data-sign="scorpio">Scorpio</button>
+      <button class="button" data-sign="sagittarius">Sagittarius</button>
+      <button class="button" data-sign="capricorn">Capricorn</button>
+      <button class="button" data-sign="aquarius">Aquarius</button>
+      <button class="button" data-sign="pisces">Pisces</button>
+    </div>
+
+    <section>
+      <form>
+        <div class="control">
+          <label for="birthday">Enter your Birthday!</label>
+          <input type="date" name="birthday" required >
+        </div>
+        <div class="control">
+          <button type="submit" >Submit</button>
+        </div>
+        <ul class="errors" hidden></ul>
+      </form>
+    </section>
+    
+      
+    <script src="./js/scripts.js"></script>
+    
+</body>
+</html>
