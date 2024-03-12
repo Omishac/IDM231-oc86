@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'pisces': { text: "This image and sound represent an Pisces", image: "./img/Pisces.png", audio: "./audio/pisces.mp3" }
     };
 
-    // Create the modal elements
+
     var modal = document.createElement("div");
     modal.id = "myModal";
     modal.className = "modal";
@@ -29,22 +29,23 @@ document.addEventListener('DOMContentLoaded', function () {
     closeButton.innerHTML = "&times;";
     modalContent.appendChild(closeButton);
 
-    var modalText = document.createElement("div");
-    modalText.id = "modalText";
+    var modalText = document.createElement('div');
+    modalText.setAttribute("id", "modalText");
     modalContent.appendChild(modalText);
 
+
     var modalImage = document.createElement("img");
-    modalImage.id = "modalImage";
-    modalContent.appendChild(modalImage);
+    modalImage.setAttribute("id", "modalImage");
+    modalContent.appendChild(modalImage);    
 
     var audioElement = new Audio(); 
 
-    // Get all buttons with class "button"
+    
     var buttons = document.querySelectorAll('.button');
 
-    // Loop through each button
+  
     for (var i = 0; i < buttons.length; i++) {
-        // Add click event listener to each button
+    
         buttons[i].addEventListener("click", function () {
             var sign = this.getAttribute("data-sign");
             var content = zodiacContent[sign];
@@ -60,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     closeButton.onclick = function () {
         modal.style.display = "none";
-        // Pause and reset audio when modal closes
         audioElement.pause();
         audioElement.currentTime = 0;
     }
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /** 
-    @param {Object} event - The event object
+    @param {Object} event 
     @return {boolean} 
      */
 
