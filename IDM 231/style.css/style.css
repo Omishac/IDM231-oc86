@@ -31,7 +31,6 @@ a {
   font-weight: bold; 
 }
 
-
 a:hover {
   color: #d87b7b;
 }
@@ -39,27 +38,23 @@ a:hover {
 .flex-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; 
-  padding: 0px; 
+  gap: 35px; 
+  padding: 10px; 
   justify-content: center; 
 }
 
 .button {
   font-family: 'Courier New', Courier, monospace;
   margin: 5px; 
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   border: none;
   cursor: pointer;
   flex-basis: 150px;
-  width: 75px;
   height: 75px;
   border-radius: 15px;
-  font-size: 18px;
+  font-size: 20px;
 }
-
-
-
 
 [data-sign="aries"]{
     background-color: #c2e7ed;
@@ -129,17 +124,10 @@ a:hover {
 }
 
 
-section {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
-
 form {
-  max-width: 31.25rem;
-  padding: 3rem;
-  width: 25vw;
+  max-width: 500px;
+  padding: 48px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,24 +139,14 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.control h2{
-  color: #96dbf2;
-}
-
-form .control:first-child {
-  margin-top: 0;
+  margin-top: 24px;
 }
 
 input {
-
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  outline: none;
-  padding: 0.75rem 0.5rem;
-  width: 100%;
+  font-size: 16px;
+  margin-top: 8px;
+  padding: 12px 8px;
+  width: auto
 }
 
 input:focus {
@@ -176,15 +154,14 @@ input:focus {
   outline-width: 0;
 }
 
-
 label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 0.875rem;
+  margin-bottom: 15px;
   text-transform: uppercase;
   color: #96dbf2;
   font-size: 25px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 input[type="date"] {
@@ -196,28 +173,29 @@ input[type="date"] {
 button[type="submit"] {
   padding: 15px 20px;
   background-color: #ffffff;
-  color: #222021;
+  color: #000000;
   border: none;
   cursor: pointer;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
+  font-size: 15px;
 }
 
 button[type="submit"]:hover {
   background-color: #7bcec7;
-  color: #354d45;
+  color: #20372f;
 }
 
 .errors {
   color: #dc2626;
   list-style: none;
-  margin: 1.5rem 0 0 0;
+  margin: -30px 0 0 0;
   padding: 0;
 }
 
 .errors li {
-  font-size: 0.875rem;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   color: red;
@@ -235,28 +213,26 @@ button[type="submit"]:hover {
 .modal {
   display: none; 
   position: fixed; 
-  top: 0; 
-  left: 0; 
   width: 100%; 
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); 
   z-index: 9999; 
 }
 
-
 .modal-content {
   position: absolute; 
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
-  background-color: #fefefe;
-  padding: 20px; 
+  background-color: white;
+  padding: 10px; 
   border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: black;
   width: 400px;
-  height: 400px;
+  height: 375px;
+  align-items: center; 
+  justify-content: center; 
 }
-
 
 #modalImage {
   max-width: 100%; 
@@ -265,15 +241,17 @@ button[type="submit"]:hover {
   height: auto;
 }
 
-.close {
+button.close {
+  background: none; 
+  color: black; 
+  border: none; 
+  padding: 5px 5px; 
   cursor: pointer; 
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 20px;
-  color: #aaa;
+  border-radius: 3px; 
+  font-size: 18px;
 }
 
-.close:hover {
-  color: #000; 
+button.close:hover {
+  background-color: #cc0000; 
+  color: white;
 }

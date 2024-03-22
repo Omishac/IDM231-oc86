@@ -15,27 +15,28 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
 
-    var modal = document.createElement("div");
-    modal.id = "myModal";
-    modal.className = "modal";
+    var modal = document.createElement('div');
+    modal.id = 'myModal';
+    modal.className = 'modal';
     document.body.appendChild(modal);
 
-    var modalContent = document.createElement("div");
-    modalContent.className = "modal-content";
+    var modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
     modal.appendChild(modalContent);
 
-    var closeButton = document.createElement("span");
-    closeButton.className = "close";
-    closeButton.innerHTML = "&times;";
+    var closeButton = document.createElement('button');
+    closeButton.className = 'close';
+    closeButton.appendChild(document.createTextNode('Close')); 
+    closeButton.type = 'button'; 
     modalContent.appendChild(closeButton);
 
     var modalText = document.createElement('div');
-    modalText.setAttribute("id", "modalText");
+    modalText.setAttribute('id', 'modalText');
     modalContent.appendChild(modalText);
 
 
-    var modalImage = document.createElement("img");
-    modalImage.setAttribute("id", "modalImage");
+    var modalImage = document.createElement('img');
+    modalImage.setAttribute('id', 'modalImage');
     modalContent.appendChild(modalImage);    
 
     var audioElement = new Audio(); 
@@ -46,12 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
     for (var i = 0; i < buttons.length; i++) {
     
-        buttons[i].addEventListener("click", function () {
-            var sign = this.getAttribute("data-sign");
+        buttons[i].addEventListener('click', function () {
+            var sign = this.getAttribute('data-sign');
             var content = zodiacContent[sign];
             modalText.textContent = content.text;
             modalImage.src = content.image;
-            modal.style.display = "block";
+            modal.style.display = 'block';
 
             audioElement.src = content.audio;
             audioElement.play();
@@ -60,14 +61,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     closeButton.onclick = function () {
-        modal.style.display = "none";
+        modal.style.display = 'none';
         audioElement.pause();
         audioElement.currentTime = 0;
     }
 
     window.onclick = function (event) {
         if (event.target === closeButton) {
-            modal.style.display = "none";
+            modal.style.display = 'none';
         }
     }
 
@@ -128,8 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
     @param {Object} event 
     @return {boolean} 
      */
-
-   
 
     function handle_submit(event) {
         event.preventDefault();
