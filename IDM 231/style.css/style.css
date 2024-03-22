@@ -227,7 +227,6 @@ button[type="submit"]:hover {
   background-color: white;
   padding: 10px; 
   border-radius: 10px; 
-  box-shadow: black;
   width: 400px;
   height: 375px;
   align-items: center; 
